@@ -16,9 +16,25 @@ const displayDate = () => {
 
 // Write a JavaScript program to convert a number to a string.
 
+const numToString = () => {
+  let num = 15;
+  let text = num.toString()
+  console.log(text)
+
+  document.getElementById("display-element").innerHTML = (`The typeof the input ${num} is ${typeof num}, the typeof output ${text} is ${typeof text}`);
+}
+
 
 
 // Write a JavaScript program to convert a string to the number.
+
+const stringToNum = () => {
+  let text = '8';
+  let num = parseFloat(text);
+  console.log(num);
+
+  document.getElementById("display-element").innerHTML = (`The typeof the input ${text} is ${typeof text}, the typeof output ${num} is ${typeof num}`);
+}
 
 
 
@@ -29,22 +45,93 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
+
+const dataTypes = () => {
+  const dataOne = Boolean(10 > 9);
+  const dataTwo = null;
+  let dataThree;
+  const dataFour = 15;
+  const dataFive = Math.sqrt(-1);
+  const dataSix = 'Ducks';
+
+  document.getElementById("display-element").innerHTML = 
+  (`The typeof the input dataOne is ${typeof dataOne} and is ${dataOne}. <br>
+  The typeof the input dataTwo is ${typeof dataTwo}. <br> 
+  The typeof the input dataThree is ${typeof dataThree}. <br>
+  The typeof the input dataFour is ${typeof dataFour}. <br>
+  The typeof the input dataFive is ${typeof dataFive} ${dataFive}. <br>
+  The typeof the input dataSix is ${typeof dataSix}.`)
+}
   
 
   
 // Write a JavaScript program that adds 2 numbers together.
 
+const addTwoNumbers = () => {
+  let num1 = 15;
+  let num2 = 5;
 
+  const sum = num1 + num2;
+  document.getElementById("display-element").innerHTML = (`The typeof the input ${num1} and ${num2} is ${typeof num1} and ${typeof num2}. The output of ${sum} is ${typeof sum}`)
+}
 
 // Write a JavaScript program that runs only when 2 things are true.
 
+const twoTrueThings = () => {
+  // These two variables will return true
+  let thingOne = 1;
+  let thingTwo = 2;
+
+  // These two variables will return false
+  // let thingOne = 1;
+  // let thingTwo = 21;
+
+  if ((thingOne == 1) && (thingTwo == 2)) {
+    document.getElementById("display-element").innerHTML = (`The true check shows both thingOne and thingTwo are true`);
+  }
+  else if ((thingOne != 1) || (thingTwo != 2)) {
+    document.getElementById("display-element").innerHTML = (`The true check shows either thingOne or thingTwo is false`);
+  }
+}
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const oneTrueThing = () => {
+  // These two variables will return true
+  let thingOne = 1;
+  let thingTwo = 2;
 
+  // These two variables will return false
+  // let thingOne = 11;
+  // let thingTwo = 21;
+
+  if ((thingOne == 1) || (thingTwo == 2)) {
+    document.getElementById("display-element").innerHTML = (`At least one thing is true`);
+  }
+  else if ((thingOne != 1) && (thingTwo != 2)) {
+    document.getElementById("display-element").innerHTML = (`Neither thing is true`);
+  }
+}
 
 // Write a JavaScript program that runs when both things are not true.  
+
+const noTrueThing = () => {
+    // These two variables will return false
+    // let thingOne = 1;
+    // let thingTwo = 2;
+  
+    // These two variables will return true
+    let thingOne = 11;
+    let thingTwo = 21;
+  
+    if ((thingOne != 1) && (thingTwo != 2)) {
+      document.getElementById("display-element").innerHTML = (`There is no truth here.`);
+    }
+    else if ((thingOne == 1) || (thingTwo == 2)) {
+      document.getElementById("display-element").innerHTML = (`Truth is hidden here.`);
+    }
+}
 
 // ***************************
 //         PART TWO
