@@ -48,7 +48,7 @@ const stringToNum = () => {
 
 const dataTypes = () => {
   const dataOne = Boolean(10 > 9);
-  const dataTwo = null;
+  let dataTwo = null;
   let dataThree;
   const dataFour = 15;
   const dataFive = Math.sqrt(-1);
